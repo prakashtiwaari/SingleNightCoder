@@ -1,6 +1,6 @@
-# mywebsite
-HOLA everyone !!
-This Website is for providing information regarding every question you asked and clear your doubt.
+# SingleNightCoder
+HOLA everyone !
+This Website offers you code on several topics and information regarding coding area. 
 This website is in beta version and still under development.
 
 # © 
