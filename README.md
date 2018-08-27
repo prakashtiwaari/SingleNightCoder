@@ -5,7 +5,7 @@ This website is in beta version and still under development.
 <html>
   <head>
     <body>
-      <h2>okay</h2>
+      <h2><a href="file.html">link here</a>okay</h2>
     </body>
   </head>
   </html>
