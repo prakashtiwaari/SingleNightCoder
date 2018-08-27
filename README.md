@@ -7,7 +7,7 @@ This website is in beta version and still under development.
 
   </head>
     <body>
-      <p><a href="file.html" style="color: #ff0000;">OPERATING SYSTEM      </a><a href="file.html" style="color: #ff0000;">JAVA</a></p>
+      <p><a href="file.html" style="color: #ff0000;">OPERATING SYSTEM</a><br><a href="file.html" style="color: #ff0000;">JAVA</a></p>
     </body>
 
   </html>
