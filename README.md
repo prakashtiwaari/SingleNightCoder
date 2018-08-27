@@ -6,7 +6,7 @@ This website is in beta version and still under development.
 
   <head>
     <body>
-      <h2><a href="file.html">OPERATING SYSTEM</a></br>okay</h2>
+      <h2><a href="file.html">OPERATING SYSTEM</a></h2><span style="display:inline-block; width: 50;"></span><h2><a href="file.html">OPERATING SYSTEM</a></h2>
     </body>
   </head>
   </html>
