@@ -3,6 +3,38 @@
 <head>
 <body>
 <h1> Write a program that creates a child process and print its pid and also the parent pid</h1>
+  <h4> #include<stdio.h><br>
+#include<pthread.h><br>
+#include<stdlib.h><br>
+#include<unistd.h><br>
+#include<sys/stat.h><br>
+#include<sys/wait.h><br>
+int main()<br>
+{<br>
+ int status;<br>
+    int pid;<br>
+    pid=fork();<br>
+    if(pid<0)<br>
+    {<br>
+        printf("\n Error ");<br>
+        exit(1);<br>
+    }<br>
+    else if(pid==0)<br>
+    {<br>
+        printf("\n Hello I am the child process ");<br>
+        printf("\n My pid is %d ",getpid());<br>
+        exit(0);<br>
+    }<br>
+    else<br>
+    {<br>
+       wait(&status);<br>
+        printf("\n Hello I am the parent process ");<br>
+        printf("\n My actual pid is %d \n ",getpid());<br>
+        printf("\n my child is having pid=%d",pid);<br>
+        exit(1);<br>
+    }<br>
+    }<br>
+              </h4>
 </body>
 </head>
 </html>
