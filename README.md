@@ -7,7 +7,7 @@ This website is in beta version and still under development.
 
   </head>
     <body>
-      <p><a href="index.html" style="color: #ff0000;">OPERATING SYSTEM</a><br><a href="file.html" style="color: #ff0000;">JAVA</a><br><a href="file.html" style="color: #ff0000;">MICROPROCESSOR 8085</a></p>
+      <p><a href="basic.html" style="color: #ff0000;">OPERATING SYSTEM</a><br><a href="file.html" style="color: #ff0000;">JAVA</a><br><a href="file.html" style="color: #ff0000;">MICROPROCESSOR 8085</a></p>
     </body>
 
   </html>
