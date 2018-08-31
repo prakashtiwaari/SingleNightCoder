@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>simple IPC</title>
+</head>
+<body>
+<h2 style="color:Red;">Create a child process so that parent writes data to pipe and child process read from that pipe</h2>
+<h5 style="color:black;">
+#include&ltstdio.h&gt<br>
+#include&ltpthread.h&gt <br>
+#include&ltunistd.h&gt <br>
+#include&ltsys/stat.h&gt <br>
+#include&ltstdlib.h&gt<br>
+#include&ltstring.h&gt <br>
+#include&ltsys/wait.h&gt <br>
+#define max 100<br>
+
+int main()<br>
+{<br>
+  int fd[2];<br>
+  char buffer[100];<br>
+  pid_t pid;<br>
+  pipe(fd);<br>
+  pid=fork();<br>
+    
+    
+  if(pid<0)<br>
+  {<br>
+     printf(" fork Error\n");<br>
+     return -1;<br>
+  }<br>
+    
+  if(pid==0)<br>
+  {<br>
+  
+  close(fd[1]);<br>
+  read(fd[0],buffer,100);<br>
+  close(fd[0]);<br><br>
+    printf(" I am the child and i will be receiving a message from parent(%d)\n",getppid());<br>
+  printf("The message is:-  ");<br>
+  puts(buffer);<br>
+  
+   
+  }<br>
+   if(pid>0)<br>
+  {<br>
+  
+     printf("I am the parent and i will be writing to the child(%d)\n",pid);<br>    
+     printf("Enter the message\n");<br>
+     char msg[max];<br>
+     gets(msg);<br>
+     close(fd[0]);<br>
+     write(fd[1],msg,100);<br>
+     close(fd[1]);<br>
+     wait(NULL);<br>
+  
+  
+  }<br>
+  return 0;<br>
+}
+</h4>
+</body>
+</html>
+}
