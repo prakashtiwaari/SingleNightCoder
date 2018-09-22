@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> List Directory</title>
+<body>
+<h1 style="color:red;"> List the directory name </h1>
+#include "apue.h"    //my own header file </br>  
+#include<dirent.h></br>  
+int main(int argc,char *argv[])</br>  
+{</br>  
+   DIR *dir;</br>  
+   struct dirent *drp;</br>  
+  if((dir=opendir(argv[1]))==NULL)</br>  
+       printf("can't open directory %s",argv[1]);</br>  
+  while((drp=readdir(dir))!=NULL)</br>  
+    printf("%s\t",drp->d_name);</br>  
+
+closedir(dir);</br>  
+exit(0);</br>  
+
+
+ }</br>  
+ </body>
+ <head>
+ </html>
