@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>My terminal</title>
+<body style="color:black;">
+<h1 style="color:red;">Create Your own terminal</h1>
+#include"apue.h"
+#define max 4096
+int main()
+{
+  pid_t pid;
+  int status;
+  char buf[max];
+printf("^_^");
+while((fgets(buf,max,stdin))!=NULL)
+ {
+   if(buf[strlen(buf)-1]=='\n')
+      buf[strlen(buf)-1]=0;
+if((pid=fork())<0)
+{
+   printf("Fork errror");
+}
+else if(pid==0){
+  execlp(buf,buf,(char*)0);
+  printf("couldn't execute the command\n");
+  return(127); 
+}
+if((pid=waitpid(pid,&status,0))<0)
+  printf("Error in child");
+
+printf("^_^");
+ 
+
+
+  }
+
+}
+</body>
+</head>
+</html>
