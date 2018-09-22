@@ -1,39 +1,39 @@
 <html>
 <head>
-<title>My terminal</title>
-<body style="color:black;">
-<h1 style="color:red;">Create Your own terminal</h1>
-#include"apue.h"
-#define max 4096
-int main()
-{
-  pid_t pid;
-  int status;
-  char buf[max];
-printf("^_^");
-while((fgets(buf,max,stdin))!=NULL)
+  <title>My terminal</title></br>
+<body style="color:black;"></br>
+<h1 style="color:red;">Create Your own terminal</h1></br>
+#inc</br>lude"apue.h"</br>
+#define m</br>ax 4096</br>
+int main()</br>
+{</br>
+  pid_t pid;</br>
+  int status;</br>
+  char buf[max];</br>
+printf("^_^");</br>
+while((fgets(buf,max,stdin))!=NULL)</br></br>
  {
-   if(buf[strlen(buf)-1]=='\n')
-      buf[strlen(buf)-1]=0;
-if((pid=fork())<0)
-{
-   printf("Fork errror");
-}
-else if(pid==0){
-  execlp(buf,buf,(char*)0);
-  printf("couldn't execute the command\n");
-  return(127); 
-}
-if((pid=waitpid(pid,&status,0))<0)
-  printf("Error in child");
+   if(buf[strlen(buf)-1]=='\n')</br>
+      buf[strlen(buf)-1]=0;</br>
+if((pid=fork())<0)</br>
+{</br>
+   printf("Fork errror");</br>
+}</br>
+else if(pid==0){</br>
+  execlp(buf,buf,(char*)0);</br>
+  printf("couldn't execute the command\n");</br>
+  return(127); </br>
+}</br>
+if((pid=waitpid(pid,&status,0))<0)</br>
+  printf("Error in child");</br>
 
-printf("^_^");
+printf("^_^");</br>
  
 
 
-  }
+  }</br>
 
-}
+}</br>
 </body>
 </head>
 </html>
