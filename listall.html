@@ -2,19 +2,20 @@
 <head>
 <title> List all file in the directory given at runtime</title>
 <body>
-#include"apue.h"</br>
-#in</br>clude<dirent.h></br>
-#define max 4096</br>
-void main()</br>
+  <h2 style="color:red;">C code for Listing all file in the directory given at runtime</h2>
+<p>#include"apue.h"</p></br>
+<p>#include<dirent.h></p></br>
+<p>#define max 4096</p></br>
+<p>void main()</p></br>
 {</br>
-  int buf[max];</br>
-  int n;</br>
-  DIR *dir;</br>
-while((n=read(STDIN_FILENO,buf,max))>0)</br>
-   if((write(STDOUT_FILENO,buf,max))!=n)</br>
-       printf("Error");</br>
- if(n<0)</br>
-   printf("error again");</br>
+<p>int buf[max];</p></br>
+  <p>int n;</p></br>
+  <p>DIR *dir;</p></br>
+<p>while((n=read(STDIN_FILENO,buf,max))>0)</p></br>
+   <p>if((write(STDOUT_FILENO,buf,max))!=n)</p></br>
+     <p>  printf("Error");</p></br>
+ <p>if(n<0)</p></br>
+   <p>printf("error again");</p></br>
 
 }</br>
 </body>
