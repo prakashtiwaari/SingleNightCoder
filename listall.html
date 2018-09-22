@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> List all file in the directory given at runtime</title>
+<body>
+#include"apue.h"</br>
+#in</br>clude<dirent.h></br>
+#define max 4096</br>
+void main()</br>
+{</br>
+  int buf[max];</br>
+  int n;</br>
+  DIR *dir;</br>
+while((n=read(STDIN_FILENO,buf,max))>0)</br>
+   if((write(STDOUT_FILENO,buf,max))!=n)</br>
+       printf("Error");</br>
+ if(n<0)</br>
+   printf("error again");</br>
+
+}</br>
+</body>
+</head>
+</html>
