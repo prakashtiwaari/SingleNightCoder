@@ -3,19 +3,19 @@
 <title> List all file in the directory given at runtime</title>
 <body>
   <h2 style="color:red;">C code for Listing all file in the directory given at runtime</h2>
-<p>#include"apue.h"</p></br>
-<p>#include<dirent.h></p></br>
-<p>#define max 4096</p></br>
-<p>void main()</p></br>
-{</br>
-<p>int buf[max];</p></br>
-  <p>int n;</p></br>
-  <p>DIR *dir;</p></br>
-<p>while((n=read(STDIN_FILENO,buf,max))>0)</p></br>
-   <p>if((write(STDOUT_FILENO,buf,max))!=n)</p></br>
-     <p>  printf("Error");</p></br>
- <p>if(n<0)</p></br>
-   <p>printf("error again");</p></br>
+<p>#include"apue.h"</p>
+<p>#include<dirent.h></p>
+<p>#define max 4096</p.
+<p>void main()</p>
+{
+  <p>int buf[max];</p>
+  <p>int n;</p>
+  <p>DIR *dir;</p>
+  <p>while((n=read(STDIN_FILENO,buf,max))>0)</p>
+   <p>if((write(STDOUT_FILENO,buf,max))!=n)</p>
+     <p>  printf("Error");</p>
+ <p>if(n<0)</p>
+  <p>printf("error again");</p>
 
 }</br>
 </body>
