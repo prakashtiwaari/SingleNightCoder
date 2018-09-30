@@ -1,0 +1,33 @@
+<html>
+<title> Check access permission</title>
+<head>
+<body background="color:grey;">
+<h1> Check the access permission of a file</h1>
+#include"apue.h"</br>
+#include<sys/stat.h></br>
+int main(int argc, char *argv[])</br>
+{</br>
+  if(argc!=2)</br>
+   printf("Error");</br>
+
+if((access(argv[1],R_OK)<0))</br>
+  printf("Access Error\n");</br>
+else</br>
+ printf("Read Access available\n");</br>
+if((open(argv[1],O_RDONLY))<0)</br>
+  printf("Open error\n");</br>
+else </br>
+printf("Open access available\n");</br>
+
+if((access(argv[1],F_OK)<0))</br>
+  printf("File not available \n");</br>
+else</br>
+ printf("File available\n");</br>
+ 
+return 0;</br>
+
+
+}</br>
+</body>
+</head>
+</html>
